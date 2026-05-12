@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilfried Momene | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(59,130,246,0.18);
+    filter:blur(120px);
+    top:-100px;
+    right:-100px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:rgba(14,165,233,0.12);
+    filter:blur(120px);
+    bottom:-100px;
+    left:-100px;
+    z-index:-1;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 10%;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    width:100%;
+}
+
+.profile-img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #3b82f6;
+    box-shadow:0 0 40px rgba(59,130,246,0.4);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0px);}
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text h1 span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+    color:white;
+}
+
+.btn-secondary{
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(59,130,246,0.25);
+}
+
+.contact-mini{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#cbd5e1;
+}
+
+.contact-mini i{
+    margin-right:8px;
+    color:#38bdf8;
+}
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#cbd5e1;
+    font-size:1.1rem;
+    line-height:2;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skill{
+    background:rgba(15,23,42,0.8);
+    border:1px solid rgba(59,130,246,0.15);
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 15px 30px rgba(59,130,246,0.15);
+}
+
+.skill h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:linear-gradient(145deg,#0f172a,#111c34);
+    border-radius:30px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,0.06);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(59,130,246,0.08);
+    border-radius:50%;
+    top:-80px;
+    right:-80px;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+.project-card h3{
+    font-size:1.8rem;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.tech{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech span{
+    background:#1e293b;
+    color:#38bdf8;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:0.9rem;
+}
+
+.project-link{
+    margin-top:25px;
+    display:inline-block;
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.status{
+    display:inline-block;
+    margin-top:15px;
+    background:#f59e0b;
+    color:black;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:0.9rem;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#0f172a;
+    border-radius:30px;
+    padding:40px;
+    text-align:center;
+    border:1px solid rgba(59,130,246,0.15);
+}
+
+.contact-box p{
+    margin:15px 0;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.contact-box i{
+    margin-right:8px;
+    color:#38bdf8;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0f172a;
+    color:#94a3b8;
+}
+
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .contact-mini{
+        align-items:center;
+    }
+
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+
+    .profile-img{
+        width:260px;
+        height:260px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+
+        <div style="text-align:center;">
+            <img src="wilfried.jpeg" alt="Wilfried Momene" class="profile-img">
+        </div>
+
+        <div class="hero-text">
+            <h1>Salut, je suis <span>Wilfried Momene</span></h1>
+
+            <p>
+                Étudiant en Génie Logiciel, développeur web passionné et futur entrepreneur digital.
+                Je crée des applications modernes et innovantes capables de résoudre des problèmes
+                réels dans les universités et les services numériques.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+
+            <div class="contact-mini">
+                <span><i class="fas fa-envelope"></i> momenewilfried@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +237 675 558 03</span>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section id="about">
+    <h2 class="section-title">À propos de moi</h2>
+
+    <div class="about">
+        Passionné par la technologie et le développement logiciel, je travaille sur des projets
+        modernes orientés utilisateur avec une attention particulière portée au design, à la performance
+        et à l'expérience utilisateur. Mon objectif est de construire des plateformes numériques
+        utiles, élégantes et impactantes.
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Compétences</h2>
+
+    <div class="skills">
+
+        <div class="skill">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, Responsive Design</p>
+        </div>
+
+        <div class="skill">
+            <h3>Backend</h3>
+            <p>Node.js, Express.js, API REST</p>
+        </div>
+
+        <div class="skill">
+            <h3>Base de données</h3>
+            <p>MySQL, Supabase</p>
+        </div>
+
+        <div class="skill">
+            <h3>Outils</h3>
+            <p>Git, GitHub, Hébergement Web</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="projets">
+
+    <h2 class="section-title">Mes Projets</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>UNILIFE</h3>
+
+            <p>
+                Plateforme qui permet de calculer et enregistrer les notes des eleves le projet 
+                etant lourd et possedant plusieurs modules j'ai decider de realiser d'abord un module de ce projet
+                ensuite le reste suivra.
+            </p>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>postgreSQL</span>
+                <span>Supabase</span>
+            </div>
+
+            <a class="project-link" href="https://github.com/momenewilfried-oss/unilife-backend" target="_blank">
+                Voir le projet sur github →
+            </a>
+            <a class="project-link" href="https://unilife-front-end.onrender.com" target="_blank">
+                Voir le projet deployer en ligne →
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>FILAGO</h3>
+
+            <p>
+                Application de gestion de guichet intelligente permettant
+                l'organisation des files d'attente et l'amélioration de
+                l'expérience client.
+            </p>
+
+            <span class="status">Projet en cours</span>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>PostgreSQL</span>
+                <span>Supabase</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-box">
+        <p><i class="fas fa-envelope"></i> Email : momenewilfried@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Téléphone : +237 675 558 03</p>
+        <p>Disponible pour collaborations, stages et projets innovants.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Wilfried Momene — Portfolio Professionnel
+</footer>
+
+</body>
+</html>
