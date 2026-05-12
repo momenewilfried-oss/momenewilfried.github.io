@@ -132,11 +132,37 @@ header{
     color:#cbd5e1;
 }
 
+.contact-mini .contact-link{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.contact-mini .contact-link:hover{
+    color:#38bdf8;
+}
+
 .contact-mini i{
     margin-right:8px;
     color:#38bdf8;
 }
 
+.contact-link{
+    display:block;
+    margin:15px 0;
+    color:#38bdf8;
+    text-decoration:none;
+    font-size:1.1rem;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.contact-link:hover{
+    color:#06b6d4;
+    transform:translateX(5px);
+}
 section{
     padding:90px 10%;
 }
@@ -326,7 +352,7 @@ footer{
             <h1>Salut, je suis <span>Wilfried Momene</span></h1>
 
             <p>
-                Étudiant en Génie Logiciel, développeur web passionné et futur entrepreneur digital.
+                Étudiant en Génie Logiciel niveau 1 , développeur web passionné et futur entrepreneur digital.
                 Je crée des applications modernes et innovantes capables de résoudre des problèmes
                 réels dans les universités et les services numériques.
             </p>
@@ -337,8 +363,8 @@ footer{
             </div>
 
             <div class="contact-mini">
-                <span><i class="fas fa-envelope"></i> momenewilfried@gmail.com</span>
-                <span><i class="fas fa-phone"></i> +237 675 558 03</span>
+                <a href="mailto:momenewilfried@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> momenewilfried@gmail.com</a>
+                <a href="tel:+237675558003" class="contact-link"><i class="fas fa-phone"></i> +237 675 558 03</a>
             </div>
         </div>
 
@@ -446,8 +472,8 @@ footer{
     <h2 class="section-title">Contact</h2>
 
     <div class="contact-box">
-        <p><i class="fas fa-envelope"></i> Email : momenewilfried@gmail.com</p>
-        <p><i class="fas fa-phone"></i> Téléphone : +237 675 558 03</p>
+        <a href="mailto:momenewilfried@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email : momenewilfried@gmail.com</a>
+        <a href="tel:+237675558003" class="contact-link"><i class="fas fa-phone"></i> Téléphone : +237 675 558 03</a>
         <p>Disponible pour collaborations, stages et projets innovants.</p>
     </div>
 </section>
